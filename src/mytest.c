@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 
+// Copyright (c) Joshua Dominguez
 
 int main()
 {
