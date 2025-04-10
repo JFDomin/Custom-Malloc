@@ -74,9 +74,6 @@ void printStatistics( void )
  *
  * \return a _block that fits the request or NULL if no free _block matches
  *
- * \TODO Implement Next Fit
- * \TODO Implement Best Fit
- * \TODO Implement Worst Fit
  */
 struct _block *findFreeBlock(struct _block **last, size_t size) 
 {
@@ -99,9 +96,7 @@ struct _block *findFreeBlock(struct _block **last, size_t size)
    }
 #endif
 
-// \TODO Put your Best Fit code in this #ifdef block
 #if defined BEST && BEST == 0
-   /** \TODO Implement best fit here */
    long long best = INT_MAX;
    struct _block *bestfit = NULL;
    long long difference = 0;
@@ -122,9 +117,7 @@ struct _block *findFreeBlock(struct _block **last, size_t size)
    curr = bestfit;
 #endif
 
-// \TODO Put your Worst Fit code in this #ifdef block
 #if defined WORST && WORST == 0
-   /** \TODO Implement worst fit here */
    long long largest = 0;
    struct _block *worst = NULL;
    while (curr) 
@@ -140,9 +133,7 @@ struct _block *findFreeBlock(struct _block **last, size_t size)
    curr = worst;
 #endif
 
-// \TODO Put your Next Fit code in this #ifdef block
 #if defined NEXT && NEXT == 0
-   /** \TODO Implement next fit here */
    if(lastAlloc)
    {
       curr = lastAlloc;
@@ -269,7 +260,7 @@ void *malloc(size_t size)
    {
       return NULL;
    }
-   /* TODO: If the block found by findFreeBlock is larger than we need then:
+   /* If the block found by findFreeBlock is larger than we need then:
             If the leftover space in the new block is greater than the sizeof(_block)+4 then
             split the block.
             If the leftover space in the new block is less than the sizeof(_block)+4 then
@@ -320,7 +311,7 @@ void free(void *ptr)
    assert(curr->free == 0);
    curr->free = true;
 
-   /* TODO: Coalesce free _blocks.  If the next block or previous block 
+   /* Coalesce free _blocks.  If the next block or previous block 
             are free then combine them with this block being freed.
    */
    struct _block *prev = heapList;

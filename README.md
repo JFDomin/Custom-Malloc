@@ -17,4 +17,4 @@ This project is a custom memory management library written in C that replicates 
 
 ### Build the project:
 ```bash
-make
+bash run.sh
