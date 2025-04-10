@@ -1,40 +1,20 @@
-# Malloc
+# Custom Malloc Implementation in C
 
-## Description
+## Overview
 
-In this project you will build your own implementation of malloc and free. That is, you will need to implement a library that interacts with the operating system to perform heap management on behalf of a user process as demonstrated in class. 
+This project is a custom memory management library written in C that replicates the behavior of `malloc()` and `free()` by interacting directly with the operating system to manage heap allocation. It supports multiple allocation strategies and simulates how a user-level allocator works under the hood.
 
-## Building and Running the Code
+## Features
 
-The code compiles into four shared libraries and six test programs. To build the code, change to your top level assignment directory and type:
-```
+- Implements four heap allocation strategies:
+  - **First-Fit**
+  - **Next-Fit**
+  - **Best-Fit**
+  - **Worst-Fit**
+- Supports block splitting and memory coalescing to reduce fragmentation
+- Tracks and prints runtime statistics for each strategy
+- Includes benchmarking tests to compare with standard `malloc()`
+
+### Build the project:
+```bash
 make
-```
-Once you have the library, you can use it to override the existing malloc by using
-LD_PRELOAD. The following example shows running the ffnf test using the First Fit shared library:
-```
-$ env LD_PRELOAD=lib/libmalloc-ff.so tests/ffnf
-```
-
-To run the other heap management schemes replace libmalloc-ff.so with the appropriate library:
-```
-Best-Fit: libmalloc-bf.so
-First-Fit: libmalloc-ff.so
-Next-Fit: libmalloc-nf.so
-Worst-Fit: libmalloc-wf.so
-```
-
-The code will print the statistics ( THESE STATS ARE FAKE) upon exit and should look like similar to:
-```
-mallocs: 8
-frees: 8
-reuses: 1
-grows: 5
-splits: 1
-coalesces: 1
-blocks: 5
-requested: 7298
-max heap: 4096
-```
-
-
