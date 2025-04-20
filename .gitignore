@@ -1,4 +1,4 @@
-tests/*
+# tests/*
 lib/*.so
 benchmarks/*
 .vscode/*
