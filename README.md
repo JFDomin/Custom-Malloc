@@ -29,7 +29,7 @@ The 4 heap allocation strategies mentioned above were benchmarked against the sy
 ### Heap Management Statistics 
 ![Heap Stats](images/heap_stats.png)
 
-> For a more in-depth analysis, see the full [report.pdf)(./Report.pdf).
+> For a more in-depth analysis, see the full ![Report.pdf](/Report.pdf).
 
 The test results show:
 - **Next Fit** had the best runtime performance.
