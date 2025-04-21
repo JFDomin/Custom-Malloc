@@ -18,6 +18,7 @@ This project is a custom memory management library written in C that replicates 
 ### Build the project:
 ```bash
 bash run.sh
+```
 
 ## Benchmarking
 The 4 heap allocation strategies mentioned above were benchmarked against the system `malloc`, the findings are based the average of 20 trials.
