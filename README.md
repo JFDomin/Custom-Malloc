@@ -29,11 +29,12 @@ The 4 heap allocation strategies mentioned above were benchmarked against the sy
 ### Heap Management Statistics 
 ![Heap Stats](images/heap_stats.png)
 
-> For a more in-depth analysis, see the full [Report](/Report.pdf).
-
 The test results show:
 - **Next Fit** had the best runtime performance.
 - **Best Fit** managed heap fragmentation more efficiently.
 - **Worst Fit** performed the worst in both metrics.
 - **System Malloc** outperformed all custom implementations by a wide margin, as expected.
+
+> For a more in-depth analysis, see the full [Report](/Report.pdf).
+
 
