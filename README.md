@@ -24,12 +24,12 @@ bash run.sh
 The 4 heap allocation strategies mentioned above were benchmarked against the system `malloc`, the findings are based the average of 20 trials.
 
 ### Runtime Comparison
-![Execution Time] (images/runtime_chart.png)
+![Execution Time](images/runtime_chart.png)
 
 ### Heap Management Statistics 
 ![Heap Stats](images/heap_stats.png)
 
->For a more in-depth analysis, see the full [report.pdf)(./Report.pdf).
+> For a more in-depth analysis, see the full [report.pdf)(./Report.pdf).
 
 The test results show:
 - **Next Fit** had the best runtime performance.
